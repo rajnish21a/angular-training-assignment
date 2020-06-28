@@ -1,1 +1,20 @@
-<p>second works!</p>
+<div class="btn-group pull-right">
+  <button class="btn btn-white" type="button"(click)="onDisplayModeChange(1)"
+      [ngClass]="{'btn-primary active': displayMode === 1}" >
+      <i class="fa fa-th"></i>
+  </button>
+  <button class="btn btn-white" type="button"  (click)="onDisplayModeChange(2)"
+      [ngClass]="{'btn-primary active': displayMode === 2}" >
+      <i class="fa fa-list"></i>
+  </button>
+</div>
+<!-- grid -->
+<!-- <div class="row" *ngIf="displayMode === 1">
+<app-grid-container *ngFor='let product of productsList' [product]="product"></app-grid-container>
+
+</div> -->
+<!-- List -->
+<!-- <div class="row" *ngIf="displayMode === 2">
+<app-list-container *ngFor='let product of productsList' [product]="product></app-list-container>
+
+</div> -->

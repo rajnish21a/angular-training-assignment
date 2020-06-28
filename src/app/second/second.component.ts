@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./second.component.css']
 })
 export class SecondComponent implements OnInit {
-
+  displayMode:number;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onDisplayModeChange(mode: number): void {
+      this.displayMode = mode;
   }
 
 }

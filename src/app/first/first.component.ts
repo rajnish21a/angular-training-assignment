@@ -10,9 +10,9 @@ export class FirstComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    $('.carousel').carousel({
-      interval: 2000
-    })
+    // $('.carousel').carousel({
+    //   interval: 2000
+    // })
   }
 
 }

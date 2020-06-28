@@ -1,14 +1,14 @@
-s<nav class="navbar navbar-default">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header"><a href="#" class="navbar-brand">Angular-Training-Assignment</a></div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="">Route 1</a></li>
-        <li><a href="">Route 2</a></li>
-        <li><a href="">Route 3</a></li>
-        <li><a href="">Route 4</a></li>
-        <li><a href="">Route 5</a></li>
-        <li><a href="">Route 6</a></li>
+        <li [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"><a [routerLink]="['/']">Route 1</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/second']">Route 2</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/third']">Route 3</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/fourth']">Route 4</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/fifth']">Route 5</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/sixth']">Route 6</a></li>
       </ul>
       <!-- <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
