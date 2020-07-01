@@ -5,6 +5,7 @@ import { SecondViewComponent } from './second-view/second-view.component';
 import { SecondViewTypeComponent } from './second-view-type/second-view-type.component';
 import { SecondViewItemComponent } from './second-view-item/second-view-item.component';
 import { SecondFilterViewComponent } from './second-filter-view/second-filter-view.component';
+import { SecondRoutingModule } from './second-routing.module';
 
 @NgModule({
   declarations:[
@@ -14,7 +15,7 @@ import { SecondFilterViewComponent } from './second-filter-view/second-filter-vi
     SecondViewItemComponent,
     SecondFilterViewComponent
   ],
-  imports:[CommonModule],
+  imports:[CommonModule,SecondRoutingModule],
   exports:[
     SecondComponent,
     SecondViewComponent,
