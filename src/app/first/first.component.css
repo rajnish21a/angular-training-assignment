@@ -1,12 +1,15 @@
-.item {
-  background: #333;
-  text-align: center;
-  height: 300px;
+.ticker{
+display: flex;
+flex-wrap: wrap;
+width: 80%;
+height:60px;
+margin: 0 auto;
 }
 
-h2 {
-  margin: 0;
-  color: #888;
-  padding-top: 80px;
-  font-size: 30px;
+.news{
+  width:76%;
+  padding:25px 2%;
+  background: #e7e7e7;
+  font-family:'popins',sans-serif;
 }
+
