@@ -1,6 +1,5 @@
 <hr>
-<div class="row" *ngFor='let in of counter(10) ;let j = index' >
-  <div [ngClass]="{'col-xs-3':colSpanNumber ===3,'col-xs-12':colSpanNumber ===12}" *ngFor="let color of gridElementColorCodes;let i=index;">
-    <app-second-view-item [colorCode]="color" columnNumber="(parseInt(j)*10)+i"></app-second-view-item>
+  <div>
+    <app-second-view-item [ngClass]="{'col-xs-3':colSpanNumber ===3,'col-xs-6':colSpanNumber ===12}" *ngFor="let item of itemList | orderByPipe:filterData;" [singleItem]="item" [colorCode]=""></app-second-view-item>
   </div>
-</div>
+

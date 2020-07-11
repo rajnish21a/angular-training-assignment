@@ -9,7 +9,8 @@ export class SecondViewItemComponent implements OnInit {
 
   constructor() { }
   @Input() colorCode: string;
-  @Input() columnNumber: string; 
+  @Input() columnNumber: string;
+  @Input() singleItem:{name:string,image:string,price:string};
   ngOnInit(): void {
   }
 

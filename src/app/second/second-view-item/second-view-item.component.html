@@ -1,4 +1,5 @@
 <div class="column" [ngStyle]="{'background-color': colorCode}">
-  <h2>Column {{columnNumber}}</h2>
-  <p>Price: </p>
+  <h4>{{singleItem.name}}</h4>
+  <img [src]="singleItem.image" alt="" class="img-responsive">
+  <p class="price">Price: Rs {{singleItem.price}}</p>
 </div>

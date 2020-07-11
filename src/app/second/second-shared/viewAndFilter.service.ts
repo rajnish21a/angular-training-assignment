@@ -6,11 +6,14 @@ import { Observable, Subject } from 'rxjs';
 export class ViewAndFilterService{
   //colSpanNo = 3;
   colSpanNumber= new Subject<any>();
+  viewFilter=new Subject<string>();
   constructor(){
 
   }
 
-
+  sortItemList(filter):void{
+      this.viewFilter.next(filter);
+  }
 
   setColSpan(view): void {
     if (view){
@@ -20,4 +23,4 @@ export class ViewAndFilterService{
     }
   }
 
-}; 
+};

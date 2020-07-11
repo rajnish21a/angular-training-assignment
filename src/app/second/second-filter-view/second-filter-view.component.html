@@ -1,1 +1,6 @@
-<p>second-filter-view works!</p>
+<div class="form-group">
+  <label for="priceSort">Sort by:</label>
+  <select name="priceSort" id="priceSort" class="form-control" (change)="onSortItem($event)">
+    <option *ngFor="let sortOption of sortOptions;" [value]="sortOption.value">{{sortOption.label}}</option>
+  </select>
+</div>
