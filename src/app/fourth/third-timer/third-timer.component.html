@@ -1,0 +1,5 @@
+<div class="row" *ngFor="let log of logs;">
+  <div class="col-sm-offset-2">
+    <span><strong>{{log.action}} at: </strong></span><span [innerHtml]="log.timeStamp  | date:'medium'"></span>
+  </div>
+</div>
