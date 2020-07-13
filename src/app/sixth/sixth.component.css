@@ -1,0 +1,7 @@
+#contentInside{
+  width:200px;
+  height:200px;
+  margin:7px;
+  border:1px solid black;
+  display:inline-flex;
+}
