@@ -1,1 +1,18 @@
-<p>fifth works!</p>
+<div class="table-responsive">
+  <table class="table table-bordered" *ngIf="marksList">
+    <thead>
+      <th *ngFor="let head of marksList[0] | keyvalue" (click)="onSort(head.key)">
+        {{head.key}}
+      </th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let m of marksList | keyvalue;">
+        <td *ngFor="let x of objectKeys(m.value);" [innerHTML]="m.value[x]"></td>
+      </tr>
+
+
+
+    </tbody>
+  </table>
+</div>
+

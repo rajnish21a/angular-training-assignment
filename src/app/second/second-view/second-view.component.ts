@@ -10,7 +10,6 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./second-view.component.css']
 })
 export class SecondViewComponent implements OnInit {
-  gridElementColorCodes: string[] = ['#aaa', '#bbb', '#ccc', '#ddd'];
   colSpanNumber:number = 3;
   filterData:string = 'acending';
   itemList:Array<{name:string,image:string,price:string}>;
@@ -23,7 +22,6 @@ export class SecondViewComponent implements OnInit {
         this.itemList=data;
     });
 
-    //this.colSpan= this.vnFService.getColSpan();
     this._vnFService.colSpanNumber.subscribe(colSpn=>{
       this.colSpanNumber = colSpn;
     })
@@ -36,10 +34,5 @@ export class SecondViewComponent implements OnInit {
   getJSON(): Observable<any> {
     return this.http.get("../../../assets/product-category.json");
   }
-
-  counter(i: number) {
-    return new Array(i);
-  }
-
 
 }
