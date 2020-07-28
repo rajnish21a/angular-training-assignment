@@ -14,35 +14,60 @@ import { HeaderComponent } from './header/header.component';
 // import { SixthComponent } from './sixth/sixth.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-
 const appRoutes: Routes = [
-  {path: 'first', loadChildren:()=>import('./first/first.module').then(m=>m.FirstModule).catch( err => console.log('Oh no!') )},
-  {path: 'second', loadChildren:()=>import('./second/second.module').then((m)=>m.SecondModule).catch( err => console.log('Oh no!') )},
-  {path: 'third', loadChildren:()=>import('./third/third.module').then(m=>m.ThirdModule).catch(err => console.log('Oh no!'))},
-  {path: 'fourth', loadChildren:()=>import('./fourth/fourth.module').then(m=>m.FourthModule).catch(err => console.log('Oh no!'))},
-  {path: 'fifth', loadChildren: ()=>import('./fifth/fifth.module').then(m=>m.FifthModule).catch(err => console.log('Oh no!'))},
-  {path: 'sixth', loadChildren:()=>import('./sixth/sixth.module').then(m=>m.SixthModule).catch(err=>console.log('Oh no!'))},
-  {path: '', redirectTo: 'first', pathMatch:'full'},
-  {path: "**", component: PageNotFoundComponent	}
+  {
+    path: 'first',
+    loadChildren: () =>
+      import('./first/first.module')
+        .then((m) => m.FirstModule)
+        .catch((err) => console.log('Oh no!')),
+  },
+  {
+    path: 'second',
+    loadChildren: () =>
+      import('./second/second.module')
+        .then((m) => m.SecondModule)
+        .catch((err) => console.log('Oh no!')),
+  },
+  {
+    path: 'third',
+    loadChildren: () =>
+      import('./third/third.module')
+        .then((m) => m.ThirdModule)
+        .catch((err) => console.log('Oh no!')),
+  },
+  {
+    path: 'fourth',
+    loadChildren: () =>
+      import('./fourth/fourth.module')
+        .then((m) => m.FourthModule)
+        .catch((err) => console.log('Oh no!')),
+  },
+  {
+    path: 'fifth',
+    loadChildren: () =>
+      import('./fifth/fifth.module')
+        .then((m) => m.FifthModule)
+        .catch((err) => console.log('Oh no!')),
+  },
+  {
+    path: 'sixth',
+    loadChildren: () =>
+      import('./sixth/sixth.module')
+        .then((m) => m.SixthModule)
+        .catch((err) => console.log('Oh no!')),
+  },
+  { path: '', redirectTo: 'first', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    PageNotFoundComponent
-  ],
+  declarations: [AppComponent, HeaderComponent, PageNotFoundComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes,{preloadingStrategy: PreloadAllModules}),
-    SecondModule,
-    FirstModule,
-    ThirdModule,
-    FourthModule,
-    FifthModule,
-    SixthModule
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
